@@ -1,0 +1,355 @@
+html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: whitesmoke;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: transform 2s;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+nav a::after {
+    content: "";
+    transform: scaleX(0);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    bottom: -5px;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+button {
+    width: 150px;
+    height: 70px;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    border-style: solid;
+    border-width: medium;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+
+/* Styling from (ordered) top of the page to bottom*/
+
+.main {
+    position: relative;
+    height: 100vh;
+    background-color: black;
+    border: 0px;
+}
+
+.main video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.mainContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: honeydew;
+    font-family: "Open Sans", sans-serif;
+}
+
+.mainContent h1 {
+    padding: 1.5rem;
+    font-family: "Poiret One", cursive;
+    font-size: 2rem;
+}
+
+.mainContent>div {
+    width: 60%;
+    padding: 1.5rem;
+}
+
+.mainContent h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.mainContent h4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.mainContent button {
+    background-color: honeydew;
+    color: rgb(134, 150, 108);
+    border-color: honeydew;
+}
+
+.mainContent button:hover {
+    box-shadow: inset 0px -70px 0 0.01px rgb(134, 132, 108);
+    color: white;
+}
+
+.main nav {
+    position: absolute;
+    top: 2rem;
+    right: 10px;
+}
+
+.main nav a {
+    float: right;
+    margin: 1rem;
+}
+
+
+.banner {
+    width: 100%;
+    background-color: rgb(134, 132, 108);
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.bannerText {
+    width: 33%;
+    height: 28vh;
+    color: honeydew;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerText h2 {
+    margin-top: 0px;
+    font-size: 2rem;
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+}
+
+.bannerText p {
+    left: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: "Quando", serif;
+}
+
+@keyframes slideInFromBelow {
+    from {
+        opacity: 0;
+        margin-top: 6rem;
+    }
+
+    to {
+        margin-top: 4.5rem;
+        opacity: 1;
+    }
+}
+
+
+.secondContent {
+    text-align: center;
+    width: 100%;
+    color: rgb(134, 132, 108);
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondContent h4 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+
+}
+
+.secondContent p {
+    font-family: "Quando", serif;
+    line-height: 3;
+    margin-bottom: 3rem;
+}
+
+.secondContent button {
+    border-color: rgb(134, 132, 108);
+    color: white;
+    background-color: rgb(134, 132, 108);
+    width: 12rem;
+}
+
+.secondContent button:hover {
+    box-shadow: inset 0 -70px 0 0.01px white;
+    color: rgb(134, 132, 108);
+}
+
+#gallery {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery .sideImage {
+    width: auto;
+    height: 90%;
+    margin: 3rem;
+
+}
+
+#gallery .centerImage {
+    width: 90%;
+    height: 45%;
+    object-fit: scale-down;
+}
+
+#gallery .centerPanel {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+
+}
+
+.promotionBanner {
+    background-color: #cdd8d9;
+    width: 80%;
+    margin: 3.5rem auto;
+    padding: 2rem;
+    color: #4c4d3c;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+}
+
+.promotionBanner b {
+    font-size: 2rem;
+}
+
+.promotionBanner button {
+    margin-left: auto;
+    border-color: rgb(134, 132, 108);
+    background-color: rgb(134, 132, 108);
+    color: white;
+}
+
+.promotionBanner button:hover {
+    box-shadow: inset 0 -100px 0 0.1px white;
+    color: rgb(134, 132, 108);
+}
+
+.lastContentBoard {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 2px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3));
+
+}
+
+.lastContentBoard #backgroundChopBoard {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -99;
+}
+
+.lastContentBoard .mainText {
+    position: absolute;
+    color: rgb(244, 240, 236);
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.5rem;
+    width: 80%;
+    top: 3rem;
+    left: 3rem;
+    right: 3rem;
+}
+
+.lastContentBoard #subDiv1 {
+    position: absolute;
+    right: 5%;
+    bottom: 5rem;
+    color: white;
+}
+
+.lastContentBoard #subDiv1 img {
+    width: 200px;
+    height: 230px;
+    object-fit: cover;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer .link a {
+    text-decoration: underline grey 3px;
+    color: grey;
+    transition: all 0.25s ease-out;
+}
+
+footer .link a:hover {
+    text-decoration: underline white 3px;
+    color: white;
+}
+
+footer div {
+    float: right;
+    display: inline-block;
+    margin: 0 50px;
+}
+
+/* Aos animation */
+[data-aos="up"] {
+    opacity: 0;
+    padding-top: 1rem;
+    transition-property: all;
+}
+
+[data-aos="up"].aos-animate {
+    padding-top: 0;
+    opacity: 1;
+}
